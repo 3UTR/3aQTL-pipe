@@ -7,10 +7,10 @@ library(dplyr)
 # -- load command line args
 
 # -- load PDUI matrix (imputed and normalied)
-pdui_mat <- read.table("./Matrix_eQTL/pdui_mat.imputed_qnorm.txt",header=T,sep="\t")
+pdui_mat <- read.table("./Matrix_eQTL/pdui_mat.imputed_qnorm.txt",header=T,sep="\t",check.names=FALSE)
 
 # -- load covariates
-covariate_mat <- read.table("./Matrix_eQTL/pdui.peer.covariates.txt",header=T,sep="\t",stringsAsFactors=F)
+covariate_mat <- read.table("./Matrix_eQTL/pdui.peer.covariates.txt",header=T,sep="\t",stringsAsFactors=F,check.names=FALSE)
 
 # -- reorder columns of PDUI matrix
 id_order <- colnames(pdui_mat)[-1]
@@ -22,7 +22,7 @@ write.table(covariate_mat.reorder,file="./Matrix_eQTL/Covariate_matrix.txt",quot
 
 
 # -- load genotype matrix
-gt_mat <- read.table("./Matrix_eQTL/genotype_matrix.bed",header=T,sep="\t")
+gt_mat <- read.table("./Matrix_eQTL/genotype_matrix.bed",header=T,sep="\t",check.names=FALSE)
 
 gt_mat.reorder <- gt_mat %>% dplyr::select("id",all_of(id_order))
 rm(gt_mat,id_order)
