@@ -50,7 +50,7 @@ cat('Dimension of gt_pca:',dim(gt_pca),'\n')
 rm(known_cov,known_cov_file)
 
 # --------------- load PDUI matrix
-pdui_mat <- read.table("./Dapars2_res.all_chromosomes.txt", stringsAsFactors=FALSE, header=TRUE,sep="\t")
+pdui_mat <- read.table("./Dapars2_res.all_chromosomes.txt", stringsAsFactors=FALSE, header=TRUE,sep="\t",check.names=FALSE)
 pdui_mat <- pdui_mat[,-c(2,3,4)]
 
 pdui_mat.sel <- pdui_mat %>% dplyr::select(all_of(gt_pca$subject_id))
