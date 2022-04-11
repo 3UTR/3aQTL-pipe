@@ -15,7 +15,10 @@ def extract_gt_from_frq(frq_file):
     for line in fh.readlines()[1:]:
         line = line.strip()
         w = line.split("\t")
-        snp = "chr" + w[0] + "_" + w[1]
+        if "chr" not in w[0]:
+            snp = "chr" + w[0] + "_" + w[1]
+        else:
+            snp = w[0] + "_" + w[1]
         allele_ref = w[4].split(":")[0]
         allele_alt = w[5].split(":")[0]
 
