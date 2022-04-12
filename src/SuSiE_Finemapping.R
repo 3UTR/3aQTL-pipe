@@ -14,7 +14,7 @@ phenotype = 'expr.phen'
 # output file prefix
 prefix = tools::file_path_sans_ext(genotype)
 
-X = t(read.table(genotype, head=T, row.names=1, quote="'"))
+X = t(read.table(genotype, head=T, row.names=1, quote="'", check.names=FALSE))
 # fill missing values in X with mean
 # because susieR does not deal with missing data explicitly for now
 for(i in 1:ncol(X)){
