@@ -4,12 +4,13 @@
 # -- global variable
 args <- commandArgs(T)
 dir <- args[1] # Prefix of Dapars2 output directory,default is "Dapars2_out"
-bamList <- args[2] # bam file list file
-chromList <- args[3] # chromosome list file: e.g. chrList.txt
+prefix <- args[2]
+bamList <- args[3] # bam file list file
+chromList <- args[4] # chromosome list file: e.g. chrList.txt
 # -- functions
 
 load_dapars2_res <- function(chromosome,new_header){
-	input_file <- paste0(dir,"_",chromosome,"/Dapars2_result_temp.",chromosome,".txt")
+	input_file <- paste0(dir,"_",chromosome,"/",prefix,"_result_temp.",chromosome,".txt")
 	dap_res <- read.table(input_file,header=T, sep="\t")
 	names(dap_res) <- new_header
 
