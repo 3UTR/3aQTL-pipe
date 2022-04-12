@@ -2,8 +2,8 @@ args <- commandArgs(T)
 
 
 #load Genotype matrix and Phenotype matrix
-gt <- read.table("./Matrix_eQTL/Genotype_matrix.txt",header=T,sep="\t")
-pt <- read.table("./Matrix_eQTL/Phenotype_matrix.txt",header=T,sep="\t")
+gt <- read.table("./Matrix_eQTL/Genotype_matrix.txt",header=T,sep="\t", check.names=FALSE)
+pt <- read.table("./Matrix_eQTL/Phenotype_matrix.txt",header=T,sep="\t", check.names=FALSE)
 
 rownames(gt) <- gt[,1]
 rownames(pt) <- pt[,1]
