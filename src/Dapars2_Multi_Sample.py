@@ -99,6 +99,9 @@ def De_Novo_3UTR_Identification_Loading_Target_Wig_for_TCGA_Multiple_Samples_Mul
         exit(1)
     cfg_file = sys.argv[1]
     curr_processing_chr = sys.argv[2]
+    if "chr" not in curr_processing_chr:
+        curr_processing_chr = "chr" + curr_processing_chr
+        
     print("[%s] Start Analysis ..." % time_now(), file=sys.stderr)
     Group1_Tophat_aligned_file, output_directory, Annotated_3UTR_file, Output_result_file, sequencing_depth_file, Num_threads, Coverage_threshold = parse_cfgfile(cfg_file)
 
@@ -304,6 +307,9 @@ def Load_Target_Wig_files_Multiple_threads_shared_dict_sampleid_key(All_Wig_file
     for line in open(UTR_Annotation_file, 'r'):
         fields = line.strip('\n').split('\t')
         curr_chr = fields[0]
+        if "chr" not in "curr_chr":
+            curr_chr = "chr" + curr_chr
+            
         if curr_chr == curr_processing_chr:
             region_start = fields[1]
             region_end = fields[2]
