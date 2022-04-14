@@ -1,5 +1,3 @@
-#!/opt/app/languages/R-4.1.0/bin/Rscript
-
 # merge Dapars2 output by chromosome
 # -- global variable
 args <- commandArgs(T)
