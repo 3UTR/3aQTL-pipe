@@ -25,10 +25,15 @@ dat <- read.table(bamList,header=F)
 sample_list <- as.character(dat$V1)
 col_names <- c("Gene","fit_value","Predicted_Proximal_APA","Loci",sample_list)
 chrs_list <- read.table(chromList,header=F)
+chrs_vec <- as.character(chrs_list)
+rm(chrs_list)
+if(! "chr" %in% chrs_vec){
+	chrs_vec <- paste0("chr",chrs_vec)
+}
 
 res.df <- data.frame()
 
-for(chr in chrs_list$V1){
+for(chr in chrs_vec){
 	temp.df <- load_dapars2_res(chr,col_names)
 	print(paste(chr,dim(temp.df)[1],sep=":"))
 	res.df <- rbind(res.df,temp.df)
