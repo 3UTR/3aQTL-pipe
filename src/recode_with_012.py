@@ -68,7 +68,11 @@ if __name__ == "__main__":
     for line in fh.readlines():
         line = line.strip()
         w = line.split("\t")
-        snp = "chr" + w[0] + "_" + w[1]
+        if "chr" not in w[0]:
+            snp = "chr" + w[0] + "_" + w[1]
+        else:
+            snp = w[0] + "_" + w[1]
+        
         if snp in snv_gt:
             snp = snp + "_" + snv_gt[snp] + "_" + args.Reference
         else:
