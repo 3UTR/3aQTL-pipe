@@ -4,9 +4,9 @@
 * APA: alternative polyadenylation
 * 3'aQTL: 3′UTR alternative polyadenylation quantitative trait loci
 
-This pipeline describes the step-by-step methods for analyzing dynamics alternative polyadenylation events across population-scale samples and performing association analysis between common genetic variants and APA usages to obtain a map of genetic regulation of APA. The whole pipeline (3'aQTL-pipe) includes APA quantitative analysis across samples, association test between common genetic variants and APA usage (mapping 3'aQTL), fine-mapping 3'aQTLs, and other steps for preparing phenotype, genotype data and processing output of above analyses. The final outputs of this pipeline including the matrix of APA usage profile across samples, the table of association between common genetic variants and APA usage (3'aQTLs), the table of fine-mapped 3'aQTLs.
+This pipeline describes the step-by-step methods for analyzing dynamics alternative polyadenylation events across population-scale samples and performing association analysis between common genetic variants and APA usages to obtain a map of genetic regulation of APA. 
 
-The scripts in this repository were tested on 89 samples from Geuvadis RNA-seq Project and corresponding genotype data from 1000 Genome Project.
+The scripts in this repository have been tested on 89 samples from Geuvadis RNA-seq Project and GTEx Project.
 For conditions to reuse of these scripts please refer to LICENSE file.
 
 ## Using this pipeline
