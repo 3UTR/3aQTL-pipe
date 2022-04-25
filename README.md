@@ -1,4 +1,4 @@
-# Mapping 3′UTR alternative polyadenylation quantitative trait loci through population-scale transcriptomic and genomic data
+# 3'aQTL-pipe
 
 **Abbreviation** 
 * APA: alternative polyadenylation
