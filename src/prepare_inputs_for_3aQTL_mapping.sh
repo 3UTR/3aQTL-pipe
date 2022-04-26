@@ -101,7 +101,7 @@ function snp_and_3utr_location(){
 	dapars2_res=$1
 	python ./src/extract_SNP_location.py --genotype_bed ./Matrix_eQTL/genotype_matrix.bed --output ${currDir}/Matrix_eQTL/snp_location.txt &
 	wait
-	python ./src/extract_3UTR_location.py --dapars_res $dapars2_res --output ${currDir}/3UTR_location.txt &
+	python ./src/extract_3UTR_location.py --dapars_res $dapars2_res --output ${currDir}/Matrix_eQTL/3UTR_location.txt &
 	wait
 	echo "Two location files: snp_location.txt and 3UTR_location.txt are generated!"
 }
