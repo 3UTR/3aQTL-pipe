@@ -40,7 +40,7 @@ col_names <- c("Gene","fit_value","Predicted_Proximal_APA","Loci",sample_list)
 chrs_list <- read.table(chromList,header=F)
 chrs_vec <- as.character(chrs_list$V1)
 rm(chrs_list)
-if(! "chr1" %in% chrs_vec){
+if(substr(chrs_vec[1],1,3)!="chr"){
 	chrs_vec <- paste0("chr",chrs_vec)
 }
 
