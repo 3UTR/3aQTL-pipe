@@ -122,7 +122,7 @@ function generate_wigFileList_with_readDepth(){
 	fi
 	python ./src/extract_read_depth.py --sample_list $bamList --path_wig ${currDir}/wig --output ${currDir}/wigFile_and_readDepth.txt &
 	wait
-	echo "Generate file wigFiles_annotated_with_readDepth.txt"
+	echo "Generate file wigFile_and_readDepth.txt"
 
 }
 function generate_3utr_reference(){
