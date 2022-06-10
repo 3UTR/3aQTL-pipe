@@ -82,6 +82,7 @@ function main(){
 	echo "-r: $RefIDmap"
 	echo "-t $P"
 	echo "-c: $Cutoff_Cov"
+	echo "-o: $Config"
 	echo "*************************************************"
 	echo "Start preparing inputs for Dapars2 ..."
 	date
