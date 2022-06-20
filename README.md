@@ -3,6 +3,7 @@
 [![Github Release](https://img.shields.io/badge/release-v1.0-brightgreen)](https://github.com/3UTR/3aQTL-pipe)
 [![python Release](https://img.shields.io/badge/python-3.8-brightgreen)](https://www.python.org/downloads/)
 [![R Release](https://img.shields.io/badge/R-3.6.3-brightgreen)](https://cran.r-project.org/)
+[![DOI](https://zenodo.org/badge/480019097.svg)](https://zenodo.org/badge/latestdoi/480019097)
 
 **Abbreviation** 
 * APA: alternative polyadenylation
