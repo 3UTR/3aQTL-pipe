@@ -29,7 +29,10 @@ Institute of Systems and Physical Biology, Shenzhen Bay Laboratory, Shenzhen 518
 ## Citation
 * Code and Execution:
 
-[Ref TBD]
+**Using population-scale transcriptomic and genomic data to map 3' UTR alternative polyadenylation quantitative trait loci**
+Xudong Zou, Ruofan Ding, Wenyan Chen, Gao Wang, Shumin Cheng, Qin Wang, Wei Li, Lei Li. ***STAR Protocols***,3(3):101566 **(2022)**.
+DOI: https://doi.org/10.1016/j.xpro.2022.101566
+https://www.sciencedirect.com/science/article/pii/S2666166722004464?via%3Dihub
 
 * The first 3'aQTL atlas of human tissues:
 
